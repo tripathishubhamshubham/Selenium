@@ -1,0 +1,8 @@
+shubhamAdvanceSelenium\PageObject\OrderPage.class
+shubhamAdvanceSelenium\PageObject\CartPage.class
+shubhamAdvacanceSelenium\resources\ExtentReporterNG.class
+shubhamAdvanceSelenium\PageObject\ProductCatalogue.class
+shubhamAdvacneSelenium\AbstractComponent\AbstractComponent.class
+shubhamAdvanceSelenium\PageObject\ConfirmationPage.class
+shubhamAdvanceSelenium\PageObject\LandingPage.class
+shubhamAdvanceSelenium\PageObject\CheckoutPage.class

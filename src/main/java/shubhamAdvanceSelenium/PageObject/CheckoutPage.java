@@ -43,7 +43,7 @@ public class CheckoutPage extends AbstractComponent{
 
 		//WebElement ele = driver.findElement(By.cssSelector(".action__submit"));
 
-		javaScriptScroll().executeScript("arguments[0].click()", submit); 
+		javaScriptScroll().executeScript("arguments[0].click()", submit);
 		
 		//submit.click();
 		return new ConfirmationPage(driver);

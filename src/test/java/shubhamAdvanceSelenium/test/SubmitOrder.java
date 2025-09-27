@@ -16,7 +16,7 @@ import shubhamAdvanceSelenium.PageObject.OrderPage;
 import shubhamAdvanceSelenium.PageObject.ProductCatalogue;
 import shubhamAdvanceSelenium.TestComponents.BaseTest;
 
-public class SubmitOrder extends BaseTest {
+public class  SubmitOrder extends BaseTest {
 
 	String productName = "ZARA COAT 3";
 
