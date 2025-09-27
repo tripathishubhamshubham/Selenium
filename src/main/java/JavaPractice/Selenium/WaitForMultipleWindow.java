@@ -17,20 +17,19 @@ import java.util.List;
 import java.util.Set;
 
 public class WaitForMultipleWindow {
-   private WebDriver driver;
 
     @Test
     public void waitForWindowsOpen(){
 
 WebDriverManager.chromedriver().setup();
-         driver = new ChromeDriver();
+        WebDriver driver1 = new ChromeDriver();
 
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver1,Duration.ofSeconds(10));
 
-        driver.get("https://rahulshettyacademy.com/loginpagePractise/");
-        driver.manage().window().maximize();
+        driver1.get("https://rahulshettyacademy.com/loginpagePractise/");
+        driver1.manage().window().maximize();
 
-        WebElement ele = driver.findElement(By.xpath("//a[contains(text(),'Free Access to')]"));
+        WebElement ele = driver1.findElement(By.xpath("//a[contains(text(),'Free Access to')]"));
         wait.until(ExpectedConditions.visibilityOf(ele));
 
         int count = 5;
@@ -41,22 +40,22 @@ WebDriverManager.chromedriver().setup();
 
         wait.until(driver -> driver.getWindowHandles().size()>=6);
 
-        String parentWindow = driver.getWindowHandle();
+        String parentWindow = driver1.getWindowHandle();
 
-        Set <String> windows = driver.getWindowHandles();
+        Set <String> windows = driver1.getWindowHandles();
 
         int size = 0;
         for(String window: windows){
 
             if(!(window).equals(parentWindow)) {
-                driver.switchTo().window(window);
-                System.out.println("Child window" + driver.getTitle());
+                driver1.switchTo().window(window);
+                System.out.println("Child window" + driver1.getTitle());
                 size++;
             }
 
         }
         System.out.println(size + "child window");
-        System.out.println(driver.switchTo().window(parentWindow).getTitle() + "Parent window switch");
+        System.out.println(driver1.switchTo().window(parentWindow).getTitle() + "Parent window switch");
 
 
     }
